@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/* ===== Tokens de Diseño Personalizados ===== */
+@theme {
+  --color-dark-900: #0a0a0f;
+  --color-dark-800: #111118;
+  --color-dark-700: #1a1a24;
+  --color-dark-600: #232330;
+  --color-dark-500: #2d2d3d;
+  --color-dark-400: #3a3a4e;
+  --color-accent-primary: #6c5ce7;
+  --color-accent-secondary: #a29bfe;
+  --color-accent-glow: #7c6df0;
+  --color-success: #00e676;
+  --color-text-primary: #e8e8f0;
+  --color-text-secondary: #9494a8;
+  --color-text-muted: #5c5c72;
+  --color-border: #2a2a3a;
+}
+
+/* ===== Estilos Globales ===== */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-dark-900);
+  color: var(--color-text-primary);
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Barra de Desplazamiento ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-dark-900);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-dark-500);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-dark-400);
+}
+
+/* ===== Animaciones ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 4px var(--color-accent-primary); }
+  50% { box-shadow: 0 0 16px var(--color-accent-glow); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+.card-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-dark-700) 25%,
+    var(--color-dark-600) 50%,
+    var(--color-dark-700) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
