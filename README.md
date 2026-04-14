@@ -129,7 +129,7 @@ Binary-Brain/
 
 ## 📦 Módulos
 
-La navegación se controla mediante `useState` en `App.jsx` (sin React Router). Cada módulo es un componente independiente que actualmente muestra un placeholder con animaciones skeleton.
+La navegación se controla mediante `useState` en `App.jsx`. Cada módulo es un componente independiente.
 
 | # | Módulo | Componente | Icono | Descripción |
 |---|---|---|---|---|
