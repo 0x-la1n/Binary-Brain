@@ -1,4 +1,4 @@
-import { X, Cpu, ArrowRightLeft, Calculator, Type, Palette } from 'lucide-react';
+import { X, Cpu, ArrowRightLeft, Calculator, Type, Palette, GitBranch } from 'lucide-react';
 
 const menuItems = [
   { id: 'conversiones', label: 'Conversiones', icon: ArrowRightLeft },
@@ -83,14 +83,26 @@ export default function Sidebar({ activeModule, onModuleChange, isOpen, onClose 
 
       {/* ── Pie de página ── */}
         <div className="border-t border-border px-6 py-4">
-          <div className="flex items-center gap-2">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-success opacity-60" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-success" />
-            </span>
-            <span className="text-xs text-text-muted">
-              Universidad de Margarita
-            </span>
+          <div className="flex items-center justify-between gap-3">
+            <div className="flex items-center gap-2 min-w-0">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-success opacity-60" />
+                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-success" />
+              </span>
+              <span className="truncate text-xs text-text-muted">
+                Universidad de Margarita
+              </span>
+            </div>
+            <a
+              href="https://github.com/0x-la1n/Binary-Brain"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex flex-shrink-0 items-center justify-center rounded-lg border border-border bg-dark-700 p-1.5 text-text-secondary transition-colors hover:bg-dark-600 hover:text-text-primary"
+              aria-label="Ir al repositorio de GitHub de Binary-Brain"
+              title="Repositorio en GitHub"
+            >
+              <GitBranch className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </aside>
