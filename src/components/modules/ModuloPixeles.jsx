@@ -39,8 +39,8 @@ function buildChannelData(value) {
 }
 
 export default function ModuloPixeles() {
-  const [hexInput, setHexInput] = useState('#FF5733');
-  const [selectedColor, setSelectedColor] = useState('#FF5733');
+  const [hexInput, setHexInput] = useState('#6c5ce7');
+  const [selectedColor, setSelectedColor] = useState('#6c5ce7');
   const [error, setError] = useState('');
 
   useEffect(() => {
